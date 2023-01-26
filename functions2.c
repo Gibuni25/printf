@@ -70,8 +70,8 @@ int print_pointer(va_list types, char buffer[],
 int print_non_printable(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
-	int i = 0, offset = 0
-		char *str = va_arg(types, char *);
+	int i = 0, offset = 0;
+	char *str = va_arg(types, char *);
 
 	UNUSED(flags);
 	UNUSED(width);
@@ -88,7 +88,7 @@ int print_non_printable(va_list types, char buffer[],
 		else
 			offset += append_hexa_code(str[i], buffer, i + offset);
 
-		i++
+		i++;
 	}
 
 	buffer[i + offset] = '\0';
@@ -128,8 +128,9 @@ int print_reverse(va_list types, char buffer[],
 	;
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[i]
-			write(1, &z, 1);
+		char z = str[i];
+		
+		write(1, &z, 1);
 		count++;
 	}
 	return (count);

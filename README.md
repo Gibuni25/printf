@@ -1,1 +1,2 @@
-Printf project
+Printf project 
+# Authors: Pascal and David
